@@ -40,6 +40,32 @@ class Spacecraft {
             this.z += 1;
         }
     }
+
+    //Rotate in the Left Direction
+    moveLeft() {
+        if (this.direction === 'N') {
+            this.direction = 'W';
+        } else if (this.direction === 'S') {
+            this.direction = 'E';
+        } else if (this.direction === 'E') {
+            this.direction = 'N';
+        } else if (this.direction === 'W') {
+            this.direction = 'S';
+        }
+    }
+
+    //Rotate in the Right Direction
+    moveRight() {
+        if (this.direction === 'N') {
+            this.direction = 'E';
+        } else if (this.direction === 'S') {
+            this.direction = 'W';
+        } else if (this.direction === 'E') {
+            this.direction = 'S';
+        } else if (this.direction === 'W') {
+            this.direction = 'N';
+        }
+    }
 }
 
 module.exports = Spacecraft;

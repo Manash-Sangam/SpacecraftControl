@@ -25,5 +25,19 @@ describe('Spacecraft Class', () => {
         spacecraft.moveBackward();
         expect(spacecraft.y).to.equal(-1);
     });
+
+    //Testing For left rotation of spacecraft
+    it('should rotate spacecraft left correctly', () => {
+        const spacecraft = new Spacecraft(0, 0, 0, 'N');
+        spacecraft.moveLeft();
+        expect(spacecraft.direction).to.equal('W');
+    });
+
+    //Testing for right rotation of spacecraft
+    it('should rotate spacecraft right correctly', () => {
+        const spacecraft = new Spacecraft(0, 0, 0, 'N');
+        spacecraft.moveRight();
+        expect(spacecraft.direction).to.equal('E');
+    });
 });
 
