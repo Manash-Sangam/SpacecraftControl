@@ -9,8 +9,8 @@ To get started with the spacecraft control program, follow these steps:
 1. Clone the repository to your local machine:
 
    ```bash
-   git clone https://github.com/your-username/your-repo.git
-   cd your-repo
+   git clone https://github.com/Manash-Sangam/SpacecraftControl.git
+   cd SpacecraftControl
    ```
 
 2. Install the dependencies using 
@@ -23,20 +23,27 @@ The spacecraft control program provides a Spacecraft class with methods for move
 
 # Create Spacecraft:
 
-```const Spacecraft = require('./src/spacecraft');
-
-const spacecraft = new Spacecraft(0, 0, 0, 'N');```
+```bash
+const Spacecraft = require('./src/spacecraft');
+const spacecraft = new Spacecraft(0, 0, 0, 'N');
+```
 
 # Execute Commands Using:
 
-```const executeCommands = require('./src/executeCommands');
+```
+bash
+const executeCommands = require('./src/executeCommands');
 
 const commands = ['f', 'r', 'u', 'b', 'l'];
 const result = executeCommands(spacecraft, commands);
 
 console.log('Final Position:', result.finalPosition);
-console.log('Final Direction:', result.finalDirection);```
+console.log('Final Direction:', result.finalDirection);
+```
 
 # Test Using:
 
-```npx mocha```
+```
+bash
+npx mocha
+```
