@@ -66,6 +66,24 @@ class Spacecraft {
             this.direction = 'N';
         }
     }
+
+        //Rotate in the Up Direction
+        moveUp() {
+            if (this.direction === 'N') {
+                this.direction = 'Up';
+            } else if (this.direction === 'S') {
+                this.direction = 'Down';
+            }
+        }
+    
+        //Rotate in the Down Direction
+        moveDown() {
+            if (this.direction === 'Up') {
+                this.direction = 'N';
+            } else if (this.direction === 'Down') {
+                this.direction = 'S';
+            }
+        }
 }
 
 module.exports = Spacecraft;
