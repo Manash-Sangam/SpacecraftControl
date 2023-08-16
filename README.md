@@ -30,8 +30,7 @@ const spacecraft = new Spacecraft(0, 0, 0, 'N');
 
 # Execute Commands Using:
 
-```
-bash
+```bash
 const executeCommands = require('./src/executeCommands');
 
 const commands = ['f', 'r', 'u', 'b', 'l'];
@@ -43,7 +42,6 @@ console.log('Final Direction:', result.finalDirection);
 
 # Test Using:
 
-```
-bash
+```bash
 npx mocha
 ```
