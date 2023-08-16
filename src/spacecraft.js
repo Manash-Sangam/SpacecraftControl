@@ -5,7 +5,7 @@ class Spacecraft {
         this.y = y;
         this.z = z;
         this.direction = direction;
-        this.horizonataldirection = direction;
+        this.horizontaldirection = direction;
     }
 
     //Move Forward
@@ -46,43 +46,46 @@ class Spacecraft {
     moveLeft() {
         if (this.direction === 'N') {
             this.direction = 'W';
-            this.horizonataldirection='W'
+            this.horizontaldirection='W'
         } else if (this.direction === 'S') {
             this.direction = 'E';
-            this.horizonataldirection='E';
+            this.horizontaldirection='E';
         } else if (this.direction === 'E') {
             this.direction = 'N';
-            this.horizonataldirection='N';
+            this.horizontaldirection='N';
         } else if (this.direction === 'W') {
             this.direction = 'S';
-            this.horizonataldirection='S'
-        } else if(this.direction==='U'){
-            if (this.horizonataldirection === 'N') {
+            this.horizontaldirection='S'
+        } 
+        
+        // Special Cases to Handle Up and Down with the help of Horizontal Direction of the Spacecraft
+        else if(this.direction==='U'){ 
+            if (this.horizontaldirection === 'N') {
                 this.direction = 'W';
-                this.horizonataldirection='W'
-            } else if (this.horizontalDirection === 'S') {
+                this.horizontaldirection='W'
+            } else if (this.horizontaldirection === 'S') {
                 this.direction = 'E';
-                this.horizonataldirection='E';
-            } else if (this.horizonataldirection === 'E') {
+                this.horizontaldirection='E';
+            } else if (this.horizontaldirection === 'E') {
                 this.direction = 'N';
-                this.horizonataldirection='N';
+                this.horizontaldirection='N';
             } else if (this.horizontaldirection === 'W') {
                 this.direction = 'S';
-                this.horizonataldirection='S'
+                this.horizontaldirection='S'
             }
         } else if(this.direction === 'D'){
-            if (this.horizonataldirection === 'N') {
+            if (this.horizontaldirection === 'N') {
                 this.direction = 'E';
-                this.horizonataldirection='E'
-            } else if (this.horizontalDirection === 'S') {
+                this.horizontaldirection='E'
+            } else if (this.horizontaldirection === 'S') {
                 this.direction = 'W';
-                this.horizonataldirection='W';
-            } else if (this.horizonataldirection === 'E') {
+                this.horizontaldirection='W';
+            } else if (this.horizontaldirection === 'E') {
                 this.direction = 'S';
-                this.horizonataldirection='S';
+                this.horizontaldirection='S';
             } else if (this.horizontaldirection === 'W') {
                 this.direction = 'N';
-                this.horizonataldirection='N'
+                this.horizontaldirection='N'
             }
         }
     }
@@ -91,43 +94,46 @@ class Spacecraft {
     moveRight() {
         if (this.direction === 'N') {
             this.direction = 'E';
-            this.horizonataldirection='E'
+            this.horizontaldirection='E'
         } else if (this.direction === 'S') {
             this.direction = 'W';
-            this.horizonataldirection='W';
+            this.horizontaldirection='W';
         } else if (this.direction === 'E') {
             this.direction = 'S';
-            this.horizonataldirection='S';
+            this.horizontaldirection='S';
         } else if (this.direction === 'W') {
             this.direction = 'N';
-            this.horizonataldirection='N'
-        } else if(this.direction==='U'){
-            if (this.horizonataldirection === 'N') {
+            this.horizontaldirection='N'
+        } 
+        
+        //Special
+        else if(this.direction==='U'){
+            if (this.horizontaldirection === 'N') {
                 this.direction = 'E';
-                this.horizonataldirection='E'
-            } else if (this.horizontalDirection === 'S') {
+                this.horizontaldirection='E'
+            } else if (this.horizontaldirection === 'S') {
                 this.direction = 'W';
-                this.horizonataldirection='W';
-            } else if (this.horizonataldirection === 'E') {
+                this.horizontaldirection='W';
+            } else if (this.horizontaldirection === 'E') {
                 this.direction = 'S';
-                this.horizonataldirection='S';
+                this.horizontaldirection='S';
             } else if (this.horizontaldirection === 'W') {
                 this.direction = 'N';
-                this.horizonataldirection='N'
+                this.horizontaldirection='N'
             }
         } else if(this.direction === 'D'){
-            if (this.horizonataldirection === 'N') {
+            if (this.horizontaldirection === 'N') {
                 this.direction = 'W';
-                this.horizonataldirection='W'
-            } else if (this.horizontalDirection === 'S') {
+                this.horizontaldirection='W'
+            } else if (this.horizontaldirection === 'S') {
                 this.direction = 'E';
-                this.horizonataldirection='E';
-            } else if (this.horizonataldirection === 'E') {
+                this.horizontaldirection='E';
+            } else if (this.horizontaldirection === 'E') {
                 this.direction = 'N';
-                this.horizonataldirection='N';
+                this.horizontaldirection='N';
             } else if (this.horizontaldirection === 'W') {
                 this.direction = 'S';
-                this.horizonataldirection='S'
+                this.horizontaldirection='S'
             }
         }
     }

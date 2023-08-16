@@ -53,6 +53,122 @@ describe('Spacecraft Class', () => {
             spacecraft.moveDown();
             expect(spacecraft.direction).to.equal('D');
         });
-    
+
+
+        //Additional Test Cases to Handle corner cases while moving left
+        it('should rotate west when it rotates left from north-up correctly', () => {
+            const spacecraft = new Spacecraft(0, 0, 0, 'N');
+            spacecraft.moveUp();
+            spacecraft.moveLeft();
+            expect(spacecraft.direction).to.equal('W');
+        });
+
+        it('should rotate east when it rotates left from south-up correctly', () => {
+            const spacecraft = new Spacecraft(0, 0, 0, 'S');
+            spacecraft.moveUp();
+            spacecraft.moveLeft();
+            expect(spacecraft.direction).to.equal('E');
+        });
+        
+        it('should rotate north when it rotates left from east-up correctly', () => {
+            const spacecraft = new Spacecraft(0, 0, 0, 'E');
+            spacecraft.moveUp();
+            spacecraft.moveLeft();
+            expect(spacecraft.direction).to.equal('N');
+        });
+
+        it('should rotate south when it rotates left from west-up correctly', () => {
+            const spacecraft = new Spacecraft(0, 0, 0, 'W');
+            spacecraft.moveUp();
+            spacecraft.moveLeft();
+            expect(spacecraft.direction).to.equal('S');
+        });
+
+        it('should rotate west when it rotates left from south-down correctly', () => {
+            const spacecraft = new Spacecraft(0, 0, 0, 'S');
+            spacecraft.moveDown();
+            spacecraft.moveLeft();
+            expect(spacecraft.direction).to.equal('W');
+        });
+
+        it('should rotate east when it rotates left from north-down correctly', () => {
+            const spacecraft = new Spacecraft(0, 0, 0, 'N');
+            spacecraft.moveDown();
+            spacecraft.moveLeft();
+            expect(spacecraft.direction).to.equal('E');
+        });
+        
+        it('should rotate south when it rotates left from east-down correctly', () => {
+            const spacecraft = new Spacecraft(0, 0, 0, 'E');
+            spacecraft.moveDown();
+            spacecraft.moveLeft();
+            expect(spacecraft.direction).to.equal('S');
+        });
+
+        it('should rotate north when it rotates left from west-down correctly', () => {
+            const spacecraft = new Spacecraft(0, 0, 0, 'W');
+            spacecraft.moveDown();
+            spacecraft.moveLeft();
+            expect(spacecraft.direction).to.equal('N');
+        });
+        
+
+        //Additional Test Cases to Handle corner cases while moving Right
+        it('should rotate east when it rotates right from north-up correctly', () => {
+            const spacecraft = new Spacecraft(0, 0, 0, 'N');
+            spacecraft.moveUp();
+            spacecraft.moveRight();
+            expect(spacecraft.direction).to.equal('E');
+        });
+
+        it('should rotate west when it rotates right from south-up correctly', () => {
+            const spacecraft = new Spacecraft(0, 0, 0, 'S');
+            spacecraft.moveUp();
+            spacecraft.moveRight();
+            expect(spacecraft.direction).to.equal('W');
+        });
+        
+        it('should rotate south when it rotates right from east-up correctly', () => {
+            const spacecraft = new Spacecraft(0, 0, 0, 'E');
+            spacecraft.moveUp();
+            spacecraft.moveRight();
+            expect(spacecraft.direction).to.equal('S');
+        });
+
+        it('should rotate north when it rotates right from west-up correctly', () => {
+            const spacecraft = new Spacecraft(0, 0, 0, 'W');
+            spacecraft.moveUp();
+            spacecraft.moveRight();
+            expect(spacecraft.direction).to.equal('N');
+        });
+
+        it('should rotate east when it rotates right from south-down correctly', () => {
+            const spacecraft = new Spacecraft(0, 0, 0, 'S');
+            spacecraft.moveDown();
+            spacecraft.moveRight();
+            expect(spacecraft.direction).to.equal('E');
+        });
+
+        it('should rotate west when it rotates right from north-down correctly', () => {
+            const spacecraft = new Spacecraft(0, 0, 0, 'N');
+            spacecraft.moveDown();
+            spacecraft.moveRight();
+            expect(spacecraft.direction).to.equal('W');
+        });
+        
+        it('should rotate north when it rotates right from east-down correctly', () => {
+            const spacecraft = new Spacecraft(0, 0, 0, 'E');
+            spacecraft.moveDown();
+            spacecraft.moveRight();
+            expect(spacecraft.direction).to.equal('N');
+        });
+
+        it('should rotate south when it rotates right from west-down correctly', () => {
+            const spacecraft = new Spacecraft(0, 0, 0, 'W');
+            spacecraft.moveDown();
+            spacecraft.moveRight();
+            expect(spacecraft.direction).to.equal('S');
+        });
+
 });
 
