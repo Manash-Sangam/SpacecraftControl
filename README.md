@@ -23,20 +23,20 @@ The spacecraft control program provides a Spacecraft class with methods for move
 
 # Create Spacecraft:
 
-const Spacecraft = require('./src/spacecraft');
+```const Spacecraft = require('./src/spacecraft');
 
-const spacecraft = new Spacecraft(0, 0, 0, 'N');
+const spacecraft = new Spacecraft(0, 0, 0, 'N');```
 
 # Execute Commands Using:
 
-const executeCommands = require('./src/executeCommands');
+```const executeCommands = require('./src/executeCommands');
 
 const commands = ['f', 'r', 'u', 'b', 'l'];
 const result = executeCommands(spacecraft, commands);
 
 console.log('Final Position:', result.finalPosition);
-console.log('Final Direction:', result.finalDirection);
+console.log('Final Direction:', result.finalDirection);```
 
 # Test Using:
 
-npx mocha
+```npx mocha```
