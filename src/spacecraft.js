@@ -1,5 +1,5 @@
 class Spacecraft {
-    //Spacecraft Structur
+    //Spacecraft Structure
     constructor(x, y, z, direction) {
         this.x = x;
         this.y = y;
