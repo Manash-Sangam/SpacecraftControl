@@ -106,7 +106,7 @@ class Spacecraft {
             this.horizontaldirection='N'
         } 
         
-        //Special
+        //Special Cases to Handle Up and Down with the help of Horizontal Direction of the Spacecraft
         else if(this.direction==='U'){
             if (this.horizontaldirection === 'N') {
                 this.direction = 'E';
