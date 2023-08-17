@@ -43,5 +43,5 @@ console.log('Final Direction:', result.finalDirection);
 # Test Using:
 
 ```bash
-npx mocha
+npm test
 ```
