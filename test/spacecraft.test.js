@@ -1,5 +1,5 @@
 const { expect } = require('chai');
-const Spacecraft = require('../src/spacecraft');
+const Spacecraft = require('../src/spaceCraft');
 
 describe('Spacecraft Class', () => {
     //Testing if the spacecraft builds correctly of not
@@ -143,7 +143,7 @@ describe('Spacecraft Class', () => {
         });
 
         it('should rotate east when it rotates right from south-down correctly', () => {
-            const spacecraft = new Spacecraft(0, 0, 0, 'S');
+            const spacecraft = new Spacecraft('0', '0', 0, 'S');
             spacecraft.moveDown();
             spacecraft.moveRight();
             expect(spacecraft.direction).to.equal('E');

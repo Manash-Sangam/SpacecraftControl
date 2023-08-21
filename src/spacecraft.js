@@ -5,7 +5,7 @@ class Spacecraft {
         this.y = y;
         this.z = z;
         this.direction = direction;
-        this.horizontaldirection = direction;
+        this.horizontalDirection = direction;
     }
 
     //Move Forward
@@ -46,46 +46,46 @@ class Spacecraft {
     moveLeft() {
         if (this.direction === 'N') {
             this.direction = 'W';
-            this.horizontaldirection='W'
+            this.horizontalDirection='W'
         } else if (this.direction === 'S') {
             this.direction = 'E';
-            this.horizontaldirection='E';
+            this.horizontalDirection='E';
         } else if (this.direction === 'E') {
             this.direction = 'N';
-            this.horizontaldirection='N';
+            this.horizontalDirection='N';
         } else if (this.direction === 'W') {
             this.direction = 'S';
-            this.horizontaldirection='S'
+            this.horizontalDirection='S'
         } 
         
         // Special Cases to Handle Up and Down with the help of Horizontal Direction of the Spacecraft
         else if(this.direction==='U'){ 
-            if (this.horizontaldirection === 'N') {
+            if (this.horizontalDirection === 'N') {
                 this.direction = 'W';
-                this.horizontaldirection='W'
-            } else if (this.horizontaldirection === 'S') {
+                this.horizontalDirection='W'
+            } else if (this.horizontalDirection === 'S') {
                 this.direction = 'E';
-                this.horizontaldirection='E';
-            } else if (this.horizontaldirection === 'E') {
+                this.horizontalDirection='E';
+            } else if (this.horizontalDirection === 'E') {
                 this.direction = 'N';
-                this.horizontaldirection='N';
-            } else if (this.horizontaldirection === 'W') {
+                this.horizontalDirection='N';
+            } else if (this.horizontalDirection === 'W') {
                 this.direction = 'S';
-                this.horizontaldirection='S'
+                this.horizontalDirection='S'
             }
         } else if(this.direction === 'D'){
-            if (this.horizontaldirection === 'N') {
+            if (this.horizontalDirection === 'N') {
                 this.direction = 'E';
-                this.horizontaldirection='E'
-            } else if (this.horizontaldirection === 'S') {
+                this.horizontalDirection='E'
+            } else if (this.horizontalDirection === 'S') {
                 this.direction = 'W';
-                this.horizontaldirection='W';
-            } else if (this.horizontaldirection === 'E') {
+                this.horizontalDirection='W';
+            } else if (this.horizontalDirection === 'E') {
                 this.direction = 'S';
-                this.horizontaldirection='S';
-            } else if (this.horizontaldirection === 'W') {
+                this.horizontalDirection='S';
+            } else if (this.horizontalDirection === 'W') {
                 this.direction = 'N';
-                this.horizontaldirection='N'
+                this.horizontalDirection='N'
             }
         }
     }
@@ -94,46 +94,46 @@ class Spacecraft {
     moveRight() {
         if (this.direction === 'N') {
             this.direction = 'E';
-            this.horizontaldirection='E'
+            this.horizontalDirection='E'
         } else if (this.direction === 'S') {
             this.direction = 'W';
-            this.horizontaldirection='W';
+            this.horizontalDirection='W';
         } else if (this.direction === 'E') {
             this.direction = 'S';
-            this.horizontaldirection='S';
+            this.horizontalDirection='S';
         } else if (this.direction === 'W') {
             this.direction = 'N';
-            this.horizontaldirection='N'
+            this.horizontalDirection='N'
         } 
         
         //Special Cases to Handle Up and Down with the help of Horizontal Direction of the Spacecraft
         else if(this.direction==='U'){
-            if (this.horizontaldirection === 'N') {
+            if (this.horizontalDirection === 'N') {
                 this.direction = 'E';
-                this.horizontaldirection='E'
-            } else if (this.horizontaldirection === 'S') {
+                this.horizontalDirection='E'
+            } else if (this.horizontalDirection === 'S') {
                 this.direction = 'W';
-                this.horizontaldirection='W';
-            } else if (this.horizontaldirection === 'E') {
+                this.horizontalDirection='W';
+            } else if (this.horizontalDirection === 'E') {
                 this.direction = 'S';
-                this.horizontaldirection='S';
-            } else if (this.horizontaldirection === 'W') {
+                this.horizontalDirection='S';
+            } else if (this.horizontalDirection === 'W') {
                 this.direction = 'N';
-                this.horizontaldirection='N'
+                this.horizontalDirection='N'
             }
         } else if(this.direction === 'D'){
-            if (this.horizontaldirection === 'N') {
+            if (this.horizontalDirection === 'N') {
                 this.direction = 'W';
-                this.horizontaldirection='W'
-            } else if (this.horizontaldirection === 'S') {
+                this.horizontalDirection='W'
+            } else if (this.horizontalDirection === 'S') {
                 this.direction = 'E';
-                this.horizontaldirection='E';
-            } else if (this.horizontaldirection === 'E') {
+                this.horizontalDirection='E';
+            } else if (this.horizontalDirection === 'E') {
                 this.direction = 'N';
-                this.horizontaldirection='N';
-            } else if (this.horizontaldirection === 'W') {
+                this.horizontalDirection='N';
+            } else if (this.horizontalDirection === 'W') {
                 this.direction = 'S';
-                this.horizontaldirection='S'
+                this.horizontalDirection='S'
             }
         }
     }

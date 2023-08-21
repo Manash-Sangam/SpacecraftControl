@@ -1,5 +1,5 @@
 const { expect } = require('chai');
-const Spacecraft = require('../src/spacecraft');
+const Spacecraft = require('../src/spaceCraft');
 const executeCommands = require('../src/executecommands');
 
 describe('executeCommands Function', () => {
