@@ -150,7 +150,12 @@ class Spacecraft {
 
   //Rotate in the Down Direction
   moveDown() {
-    this.direction = 'D';
+    if(this.direction === 'D'){
+        this.direction = 'U';
+    }
+    else{
+        this.direction = 'D';
+    }
   }
 }
 
