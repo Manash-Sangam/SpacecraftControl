@@ -166,4 +166,11 @@ describe('Spacecraft Class', () => {
     spacecraft.moveRight();
     expect(spacecraft.direction).to.equal('S');
   });
+
+  it('should rotate down when moving from Up direction to Up direction',()=>{
+    const spacecraft = new Spacecraft(0, 0, 0, 'N');
+    spacecraft.moveUp();
+    spacecraft.moveUp();
+    expect(spacecraft.direction).to.equal('D');
+  })
 });
