@@ -167,6 +167,7 @@ describe('Spacecraft Class', () => {
         expect(spacecraft.direction).to.equal('S')
     })
 
+    //Implemented New Case where moving twice Up results in Down
     it('should rotate down when moving from Up direction to Up direction', () => {
         const spacecraft = new Spacecraft(0, 0, 0, 'N')
         spacecraft.moveUp()
@@ -174,10 +175,12 @@ describe('Spacecraft Class', () => {
         expect(spacecraft.direction).to.equal('D')
     })
 
+    //Implemented New Case where moving twice Down results in Up
     it('should rotate down when moving from Down direction to Down direction', () => {
         const spacecraft = new Spacecraft(0, 0, 0, 'N')
         spacecraft.moveDown()
         spacecraft.moveDown()
         expect(spacecraft.direction).to.equal('U')
     })
+
 })
