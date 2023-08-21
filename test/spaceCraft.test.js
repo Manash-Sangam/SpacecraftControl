@@ -182,5 +182,4 @@ describe('Spacecraft Class', () => {
         spacecraft.moveDown()
         expect(spacecraft.direction).to.equal('U')
     })
-
 })
